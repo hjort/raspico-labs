@@ -26,11 +26,14 @@ pixels.set_pixel_line_gradient(0, 3, yellow, red)
 pixels.show()
 
 while True:
-    for i in range(numpix, 0, -1):
-        pixels.rotate_left()
-        pixels.show()
-        sleep(.2)
-    continue
+    
+#     for i in range(numpix, 0, -1):
+#         pixels.rotate_left()
+#         pixels.show()
+#         sleep(.2)
+#         
+#     continue
+
     for i in range(0, numpix):
         pixels.rotate_right()
         pixels.show()
@@ -40,19 +43,15 @@ while True:
     
     for i in range(0, numpix - 3):
         pixels.clear()
-#         pixels.fill((0,0,0))
-        pixels.set_pixel_line_gradient(i, i+3, red, yellow)
+        pixels.set_pixel_line_gradient(i, i + 3, red, yellow)
         pixels.show()
         sleep(.10)
-
     sleep(1)
 
     for i in range(numpix - 3, 2, -1):
         pixels.clear()
-#         pixels.fill((0,0,0))
-        pixels.set_pixel_line_gradient(i-3, i, red, yellow)
+        pixels.set_pixel_line_gradient(i - 3, i, red, yellow)
         pixels.show()
         sleep(.10)
-
     sleep(1)
     
